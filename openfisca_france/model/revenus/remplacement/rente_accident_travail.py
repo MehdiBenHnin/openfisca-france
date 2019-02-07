@@ -73,15 +73,15 @@ class indemnite_accident_travail(Variable):
         indem_at = parameters(period).accident_travail.rente.taux
         taux_incapacite = individu('taux_accident_travail', period)
         return select(
-            [taux_incapacite == 0.01, taux_incapacite == 0.02, taux_incapacite == 0.03, taux_incapacite == 0.04,
-             taux_incapacite == 0.05, taux_incapacite == 0.06, taux_incapacite == 0.07, taux_incapacite == 0.08,
-             taux_incapacite == 0.09],
-            [indem_at.indemnite_accident_travail['taux_1'], indem_at.indemnite_accident_travail['taux_2'],
-             indem_at.indemnite_accident_travail['taux_3'], indem_at.indemnite_accident_travail['taux_4'],
-             indem_at.indemnite_accident_travail['taux_5'], indem_at.indemnite_accident_travail['taux_6'],
-             indem_at.indemnite_accident_travail['taux_7'], indem_at.indemnite_accident_travail['taux_8'],
-             indem_at.indemnite_accident_travail['taux_9']]
-        )
+                [taux_incapacite == 0.01, taux_incapacite == 0.02, taux_incapacite == 0.03, taux_incapacite == 0.04,
+                taux_incapacite == 0.05, taux_incapacite == 0.06, taux_incapacite == 0.07, taux_incapacite == 0.08,
+                taux_incapacite == 0.09],
+                [indem_at.indemnite_accident_travail['taux_1'], indem_at.indemnite_accident_travail['taux_2'],
+                indem_at.indemnite_accident_travail['taux_3'], indem_at.indemnite_accident_travail['taux_4'],
+                indem_at.indemnite_accident_travail['taux_5'], indem_at.indemnite_accident_travail['taux_6'],
+                indem_at.indemnite_accident_travail['taux_7'], indem_at.indemnite_accident_travail['taux_8'],
+                indem_at.indemnite_accident_travail['taux_9']]
+                )
 
 
 class rente_accident_travail_base(Variable):
@@ -95,10 +95,7 @@ class rente_accident_travail_base(Variable):
         param_rente_at = parameters(period).accident_travail.rente.taux
         taux_incapacite = individu('taux_accident_travail', period)
         taux = param_rente_at.bareme.calc(taux_incapacite)
-        taux_rente_accident_travail = select(
-                                [taux_incapacite < param_rente_at.taux_minimum],
-                                [0], default=taux
-                                )
+        taux_rente_accident_travail = select([taux_incapacite < param_rente_at.taux_minimum], [0], default=taux)
         rente_accident_travail_base = individu('rente_accident_travail_salaire_utile', period) * taux_rente_accident_travail
 
         return rente_accident_travail_base
