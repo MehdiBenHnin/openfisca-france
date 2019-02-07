@@ -125,7 +125,7 @@ class rente_accident_travail_apres_rachat(Variable):
         conversion_rente_capital = rente_at.capital_representatif[age]
         rente_accident_travail_base = individu('rente_accident_travail_base', period)
         rente_apres_rachat = where(
-            conversion_rente_capetal != 0,
+            conversion_rente_capital != 0,
             rente_accident_travail_base - (rente_accident_travail_rachat / conversion_rente_capital),
             rente_accident_travail_base)
 
