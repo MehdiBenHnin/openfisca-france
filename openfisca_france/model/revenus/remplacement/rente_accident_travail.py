@@ -104,7 +104,7 @@ class rente_accident_travail_base(Variable):
 class demande_rachat(Variable):
     value_type = bool
     entity = Individu
-    label = u"Le victime demande le rachat partiel de la rente"
+    label = u"La victime demande le rachat partiel de la rente"
     definition_period = MONTH
 
 
