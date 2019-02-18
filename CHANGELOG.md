@@ -1,5 +1,14 @@
 # Changelog
 
+## 34.9.0 [#1278](https://github.com/openfisca/openfisca-france/pull/1278)
+
+* Correction d'un crash.
+* Périodes concernées : toutes.
+* Zones impactées:
+    - `prestations/minima_sociaux/aah`
+    - `prelevements_obligatoires/impot_revenu/ir`
+* Détails : inclut les revenus du capital dans l'évaluation annuelle des ressources de l'AAH.
+
 ### 34.8.0 [#1280](https://github.com/openfisca/openfisca-france/pull/1280)
 
 * Revalorisation périodique
