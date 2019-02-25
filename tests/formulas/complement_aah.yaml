@@ -1,4 +1,4 @@
-- name: 'Cas 1 : Personne bénéfice du Complément de Ressources'
+- name: 'Cas 1 : Personne bénéficie du Complément de Ressources'
   period: 2019-01
   absolute_error_margin: 1
   input:
@@ -7,7 +7,7 @@
     individus:
       parent1:
         age: 58
-        taux_incapacite: 0.81
+        taux_incapacite: 0.8
         taux_capacite_travail: 0.04
         aah: 261.56
         asi: 230.32
@@ -23,7 +23,7 @@
     complement_ressources_aah: 179.31
     caah: 179.31
 
-- name: 'Cas 2 : Personne bénéfice de la Majoration pour Vie Autonome'
+- name: 'Cas 2 : Personne bénéficie de la Majoration pour Vie Autonome'
   period: 2019-01
   absolute_error_margin: 1
   input:
@@ -33,7 +33,7 @@
     individus:
       parent1:
         age: 58
-        taux_incapacite: 0.81
+        taux_incapacite: 0.8
         aah: 261.56
         asi: 200.71
     foyers_fiscaux:
