@@ -1,4 +1,4 @@
-- name: "Cas 1: Victime salariée, taux d'IPP < 10%, versement d'une indemnité en capital"
+ - name: "Cas 1: Victime salariée, taux d'IPP < 10%, versement d'une indemnité en capital"
   period: 2018-07
   absolute_error_margin: 0.01
   input:
