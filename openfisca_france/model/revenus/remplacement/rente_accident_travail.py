@@ -38,9 +38,9 @@ class rente_accident_travail_salarie(Variable):
                                                rente_accident_travail_base)
 
         return select(
-                [taux_incapacite < 0.1, taux_incapacite >= 0.1],
-                [0, montant_rente_accident_travail / 12]
-                )
+            [taux_incapacite < 0.1, taux_incapacite >= 0.1],
+            [0, montant_rente_accident_travail / 12]
+            )
 
 
 class rente_accident_travail_exploitant_agricole(Variable):
@@ -61,9 +61,9 @@ class rente_accident_travail_exploitant_agricole(Variable):
         montant_rente_accident_travail = where(rente_accident_travail_rachat != 0, rente_accident_travail_apres_rachat,
                                                rente_accident_travail_base)
         return select(
-                [taux_incapacite < 0.3, taux_incapacite >= 0.3],
-                [0, montant_rente_accident_travail / 12]
-                )
+            [taux_incapacite < 0.3, taux_incapacite >= 0.3],
+            [0, montant_rente_accident_travail / 12]
+            )
 
 
 class indemnite_accident_travail(Variable):
